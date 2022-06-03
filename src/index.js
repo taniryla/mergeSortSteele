@@ -1,7 +1,8 @@
 function mergeSort(arr) {
   // helper recursion for merging 2 sorted arrays
-  function helper(left, right, newArr) {
+  function helper(idx, left, right, final) {
     let newArr = [];
+    let count = 0; // count increases for each layer of arrays
     let i = 0;
     let j = 0;
     // while there are still values we haven't looked at
@@ -24,6 +25,7 @@ function mergeSort(arr) {
         newArr.slice(j, right[j]);
         j++;
       }
+      helper(count++, left[count], right[count], newArr);
     }
     // what to do if left and right arrays are not the same size
   }
