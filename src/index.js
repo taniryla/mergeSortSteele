@@ -6,7 +6,7 @@ function mergeSort(arr) {
     let i = 0;
     let j = 0;
     // while there are still values we haven't looked at
-    while (i < left.length - 1 && j < right.length - 1) {
+    while (i < left.length || j < right.length) {
       // take a look at the smallest values in each input array
       if (left[i + 1] < left[i]) {
         let temp = left[i];
