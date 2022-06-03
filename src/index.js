@@ -26,7 +26,10 @@ function mergeSort(arr) {
         j++;
       } else {
         // what to do if left and right arrays are not the same size
-        newArr.push(left[i] || right[j]);
+        newArr.push(left[i]);
+        i++;
+        newArr.push(right[j]);
+        j++;
       }
       helper(count++, left[count], right[count], newArr);
     }
