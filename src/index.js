@@ -18,7 +18,7 @@ function mergeSort(arr) {
       if (arr[j + 1] < arr[j]) {
         let temp1 = arr[j];
         arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+        arr[j + 1] = temp1;
         j++;
       } else {
         j++;
