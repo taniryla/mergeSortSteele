@@ -19,10 +19,10 @@ function mergeSort(arr) {
         right[j + 1] = temp1;
       }
       if (left[i] < right[j]) {
-        newArr.slice(i, left[i]);
+        newArr.push(left[i]);
         i++;
       } else {
-        newArr.slice(j, right[j]);
+        newArr.push(right[j]);
         j++;
       }
       helper(count++, left[count], right[count], newArr);
