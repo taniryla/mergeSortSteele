@@ -11,16 +11,17 @@ function mergeSort(arr) {
         let temp = left[i];
         left[i] = left[i + 1];
         left[i + 1] = temp;
-        i++;
-      } else {
-        i++;
       }
       if (right[j + 1] < right[j]) {
         let temp1 = right[j];
         right[j] = right[j + 1];
         right[j + 1] = temp1;
-        j++;
+      }
+      if (left[i] < right[j]) {
+        newArr.slice(i, left[i]);
+        i++;
       } else {
+        newArr.slice(j, right[j]);
         j++;
       }
     }
